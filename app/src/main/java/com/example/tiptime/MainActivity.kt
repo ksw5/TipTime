@@ -30,6 +30,8 @@ class MainActivity : AppCompatActivity() {
         // Setup a click listener on the calculate button to calculate the tip
         binding.calculateButton.setOnClickListener { calculateTip() }
 
+        binding.costOfServiceEditText.setOnKeyListener { view, keyCode, _ -> handleKeyEvent(view, keyCode) }
+
         // Set up a key listener on the EditText field to listen for "enter" button presses
        /* binding.costOfServiceEditText.setOnKeyListener { view, keyCode, _ ->
             handleKeyEvent (
